@@ -1,0 +1,52 @@
+.header
+  background: $color-white
+  @extend %p-fixed
+  // top: 0
+  // left: 0
+  width: 100%
+  height: 55px
+  z-index: 1
+  @include box-shadow(0 5px 5px rgba(0,0,0,.1))
+  ul
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin: 0
+    padding: 0 0 0 45px 
+    list-style: none
+    height: 100%
+    @include transition(all 0.5s ease-in-out )   
+    @include respond-to('medium')
+      padding: 0 0 0 213px 
+    li
+      @extend %c-preto
+      @extend %t-3s
+      display: flex
+      align-items: center
+      white-space: nowrap  
+      &:first-child
+        button
+          @include respond-to('large')
+            display: none  
+      &:last-child
+        margin: auto 15px auto 15px
+        p
+          margin-left: 20px
+          font-family: 'Roboto Condensed', sans-serif
+      button
+        @extend %c-preto  
+        background: transparent
+        border: none
+        font-size: 20px
+        cursor: pointer
+        display: block
+        &:focus
+          outline: none
+        // @include respond-to('medium')
+        //   display: none  
+.flexToolbar
+  @include respond-to('device')
+    padding: 0 0 0 240px !important
+  @include respond-to('medium')
+    padding: 0 0 0 45px !important
+

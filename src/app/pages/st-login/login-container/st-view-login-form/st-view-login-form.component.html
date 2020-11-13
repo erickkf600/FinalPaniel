@@ -1,0 +1,22 @@
+<div class="_login">
+   <section class="_auth">
+      <div class="_content">
+         <div class="form-content">
+            <h1 class="title">LOGIN</h1>
+            <form [formGroup]="signinFormGroup" action="" class="_auth--form">
+               <mat-form-field appearance="outline">
+                  <mat-label>Usuário</mat-label>
+                  <input matInput formControlName="email" type="text" autocomplete="gs-login-admin" />
+               </mat-form-field>
+               <mat-form-field appearance="outline">
+                  <mat-label>Senha</mat-label>
+                  <input matInput type="text" formControlName="senha" id="password" name="password" />
+               </mat-form-field>
+               <button type="submit" mat-button color="primary" (click)="doLogin()">
+                  ENTRAR
+               </button>
+            </form>
+         </div>
+      </div>
+   </section>
+</div>

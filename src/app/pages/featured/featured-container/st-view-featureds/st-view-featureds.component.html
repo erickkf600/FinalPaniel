@@ -1,0 +1,29 @@
+<div class="loadingIn" *ngIf="internalLoader; else showDestaques">
+    <span>
+        <internal-loader></internal-loader>
+    </span>
+</div>
+<ng-template #showDestaques>
+    <div class="_grid">
+       <div class="item featured" *ngFor="let dest of featured">
+        <div class="head">
+            <p>{{dest.titulo_show}}</p>
+            <button mat-icon-button [matMenuTriggerFor]="menu" class="menuBtn" title="MENU">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+          </div>
+          <mat-chip-list>
+            <mat-chip>{{dest.categoria}}</mat-chip>
+            <mat-chip>{{dest.exclusivo == 0 ? 'não exclusivo' : 'exclusivo'}}</mat-chip>
+          </mat-chip-list>
+          <img [src]="dest.img_desktop" alt="Banner não encontrado">
+          <!-- MENU -->
+          <mat-menu #menu="matMenu">
+            <app-menu></app-menu>
+          </mat-menu>
+       </div> 
+       <div class="item">
+            <span class="nrn-add"></span>
+       </div>
+    </div>
+</ng-template>

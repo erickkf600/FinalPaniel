@@ -1,0 +1,16 @@
+<nav class="header">
+    <ul [ngClass]="{'flexToolbar': showSide}">
+        <li>
+            <button class="minimizar" (click)="hideSide()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <span>{{selectedItemFromMenu}}</span>
+        </li>
+        <li>
+            <p>{{user?.name}}</p>
+        </li>
+    </ul>
+</nav>
+<!-- <nav id="sidebar" class="sidebar-wrapper" [ngClass]="{'min-sidenav':showSide}">
+    <view-sidemenu [showSide]="showSide"></view-sidemenu>
+</nav> -->

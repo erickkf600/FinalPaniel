@@ -1,0 +1,76 @@
+._login
+    display: flex
+    justify-content: center
+    align-items: center
+    min-height: 100vh
+    padding: 0 30px
+    background-image: url('/assets/images/background-login.jpg')
+    background-repeat: no-repeat
+    background-size: cover
+._auth
+    width: 600px
+    ._content
+        background: white
+        padding: 0
+        margin: 0
+        width: 100%
+        max-height: unset
+        border-radius: 10px    
+        .form-content 
+            display: flex
+            position: relative
+            flex-direction: column
+            padding: 1.5em 
+            .title 
+                color: rgb(14, 14, 14)
+                margin: 0.3em auto
+                font-size: 20px
+                @include respond-to(medium) 
+                    font-size: 40px    
+            .access
+                color: rgb(14, 14, 14)
+                font-weight: bold
+            form
+                display: grid
+                grid-template: auto auto auto / auto
+                width: 100%
+                grid-gap: 5px      
+
+                .mat-form-field-flex 
+                    border: none
+                    margin: 0
+                    background: #fafafa
+          
+                input 
+                    background: #fafafa
+                    color: $color-black
+                    font-size: 0.9em
+                    width: 100%
+                    height: 100%
+                button
+                    width: 100%
+                    background: $primary-color
+                    color: white
+                    font-weight: bold
+                    text-transform: uppercase
+                    border: 0
+                    border-radius: 0.7em
+                    font-size: 0.8em
+                    padding: 0.8em 0
+                    @include transition(.3s)
+                    &:hover
+                        background: $color-black
+                        color: $color-white
+
+          
+                    
+             
+          
+
+            
+          
+
+     
+        
+         
+             

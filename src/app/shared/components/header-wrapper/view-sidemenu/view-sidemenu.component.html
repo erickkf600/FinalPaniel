@@ -1,0 +1,13 @@
+<div class="sidebar-content">
+    <div class="sidebar-menu">
+        <div class="_close">
+            <i class="fas fa-times" (click)="hideSide()"></i>
+        </div>
+        <ul>
+            <li *ngFor="let p of pages" [ngClass]="{'actived': selectedItem == p.url }" (click)="openPage(p)">
+                <i [class]="p.icon"></i>
+                <span>{{ p.title }}</span>
+            </li>
+        </ul>
+    </div>
+</div>

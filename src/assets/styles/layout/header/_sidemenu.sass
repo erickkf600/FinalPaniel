@@ -1,0 +1,72 @@
+.sidebar-wrapper
+  width: 42px
+  height: 100%
+  @extend %p-fixed
+  top: 0
+  background: $primary-color
+  height: 100%
+  @include transition(all 0.5s ease-in-out )
+  @include respond-to('medium')
+    width: 200px
+  @include respond-to('extra-large')
+    width: 225px
+  ._close
+    display: none
+    position: absolute
+    top: 10px
+    right: 10px
+    color: $color-white  
+    @include respond-to('large')
+      display: none
+  ._header-logo
+    img
+      width: 90%
+      display: flex
+      justify-content: center
+      margin: 20px auto 0
+  ul
+    list-style: none
+    margin: 0px
+    padding: 45px 0 0 0
+    overflow: hidden
+    @extend %p-relative
+    li
+      display: flex
+      align-items: center
+      padding: 15px
+      height: 25px
+      text-decoration: none
+      cursor: pointer
+      margin: 10px auto 10px auto
+      @extend %c-branco
+      @extend %t-3s
+      font:
+        size: 15px
+        family: 'Open Sans'
+        weight : 100
+      &:hover,
+      &.actived
+        background: $activePageSideMenu
+        @extend %c-branco  
+      span 
+        white-space: nowrap  
+        @include respond-to('large')
+            display: block
+      i
+        font-size: 22px
+        margin-right: 15px
+        margin-left: -6px
+        @include respond-to('large')
+          margin-left: 0
+._version 
+  position: absolute
+  bottom: 20px
+  left: 65px
+.min-sidenav
+  width: 190px
+  ._close
+    display: block
+  @include respond-to('device')
+    width: 240px
+  @include respond-to('medium')  
+    width: 42px

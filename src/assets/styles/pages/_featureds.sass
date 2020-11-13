@@ -1,0 +1,46 @@
+.featured
+    position: relative
+.head
+    position: absolute
+    display: flex
+    flex-flow: row
+    align-items: center
+    justify-content: space-between
+    width: 100%
+    top: 0
+    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.8) 75%)
+    .menuBtn
+        color: $color-white
+    p
+        margin-left: 15px
+        @extend %c-branco
+        font-weight: bold
+        font-size: 17px
+        text-shadow: 1px 1px $color-black  
+.mat-chip-list
+    position: absolute
+    bottom: 10px
+    right: 10px 
+    .mat-chip
+        background: $primary-color
+        color: $color-white
+        font-weight: bold
+        min-height: 22px
+        &:last-child
+            background: $color-black
+.cropper-buttons
+    margin-top: 30px
+    button
+        margin: auto 10px auto 10px
+        background: $primary-color
+        color: $color-white
+        font-weight: bold
+        @include border-radius(5px)
+        padding: 10px
+        &:last-child
+            background: $color-green
+        
+    
+            
+        
+         
